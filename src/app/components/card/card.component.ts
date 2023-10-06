@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 	template: `
 		<a href="#" class="card__container">
 			<img class="card__image" src="assets/ffx.jpg" alt="" />
+			<app-card-label />
 		</a>
 	`,
 	styleUrls: ['./card.component.scss'],
