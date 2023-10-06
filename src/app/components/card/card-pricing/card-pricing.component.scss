@@ -10,29 +10,32 @@
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.8);
 
-  & .card-pricing__title {
+  .card-pricing__title {
     margin-bottom: 4px;
   }
 
-  & .card-pricing__value {
+  .card-pricing__value {
     display: flex;
     justify-content: space-between;
   }
 
-  & .card-pricing__value__console {
-    display: flex;
-
-    & span {
-      font-weight: bolder;
-      color: aqua;
-
-    }
+  span {
+    font-weight: bolder;
+    color: aqua;
+    margin-right: 2px;
   }
 
-  & .game-price {
+  .card-pricing__value__console {
+    display: flex;
+  }
+
+  .game-price {
     font-weight: bolder;
     font-size: 16px;
-  }
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
 
+  }
 
 }

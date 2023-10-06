@@ -5,12 +5,15 @@ import { Component, Input } from '@angular/core';
 	template: `
 		<a href="#" class="card__container">
 			<img class="card__image" [src]="[gameCover]" alt="" />
-			<app-card-label gameLabel="Digital" />
-			<app-card-pricing />
+			<app-card-label gameLabel=" {{ gameLabel }}" />
+			<app-card-pricing gameType="{{ gameType }}" gamePrice="{{ gamePrice }}" />
 		</a>
 	`,
 	styleUrls: ['./card.component.scss'],
 })
 export class CardComponent {
 	@Input() gameCover!: string;
+	@Input() gameLabel!: string;
+	@Input() gameType!: string;
+	@Input() gamePrice!: string;
 }
