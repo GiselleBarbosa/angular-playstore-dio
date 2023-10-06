@@ -10,5 +10,5 @@ import { Component, Input } from '@angular/core';
 	styleUrls: ['./card-label.component.scss'],
 })
 export class CardLabelComponent {
-	@Input() public gameLabel = 'Exclusivo';
+	@Input() public gameLabel!: string;
 }

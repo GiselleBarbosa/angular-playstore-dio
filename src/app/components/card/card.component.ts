@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
 	selector: 'app-card',
 	template: `
 		<a href="#" class="card__container">
-			<img class="card__image" src="assets/ffx.jpg" alt="" />
-			<app-card-label />
+			<img class="card__image" [src]="[gameCover]" alt="" />
+			<app-card-label gameLabel="Digital" />
 			<app-card-pricing />
 		</a>
 	`,
 	styleUrls: ['./card.component.scss'],
 })
-export class CardComponent {}
+export class CardComponent {
+	@Input() gameCover!: string;
+}

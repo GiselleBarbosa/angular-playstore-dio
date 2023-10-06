@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
 	selector: 'app-menu-bar',
-	template: `<div class="menu-bar__container">
+	template: `
+	<div class="menu-bar__container">
 		<div class="menu-bar__logo">
 			<img
 				src="assets/ps-logo.png"
