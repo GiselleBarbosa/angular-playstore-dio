@@ -25,18 +25,14 @@
 ul {
   display: flex;
   gap: 2rem;
+}
 
-  & li {
-    color: black;
+li {
+  margin-right: 1.5rem;
+  font-weight: 400;
 
-    & a {
-      cursor: pointer;
-      font-weight: bold;
-
-      &:hover {
-        color: blue;
-      }
-    }
+  & :hover {
+    color: blue;
+    font-weight: 600;
   }
-
 }
