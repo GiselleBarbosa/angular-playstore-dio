@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
 		<a href="#" class="card__container">
 			<img class="card__image" src="assets/ffx.jpg" alt="" />
 			<app-card-label />
+			<app-card-pricing />
 		</a>
 	`,
 	styleUrls: ['./card.component.scss'],

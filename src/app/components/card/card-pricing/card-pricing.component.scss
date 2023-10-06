@@ -1,0 +1,38 @@
+.card-pricing__container {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  color: antiquewhite;
+  width: 100%;
+  height: 70px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  & .card-pricing__title {
+    margin-bottom: 4px;
+  }
+
+  & .card-pricing__value {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & .card-pricing__value__console {
+    display: flex;
+
+    & span {
+      font-weight: bolder;
+      color: aqua;
+
+    }
+  }
+
+  & .game-price {
+    font-weight: bolder;
+    font-size: 16px;
+  }
+
+
+}
