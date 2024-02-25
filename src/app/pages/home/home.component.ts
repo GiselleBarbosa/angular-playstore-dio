@@ -38,14 +38,34 @@ import { Component } from '@angular/core';
 		/>
 
 		<app-card
-			gameCover="assets/bt-4.jpg"
+			gameCover="assets/tlou.jpg"
+			[gameLabel]="'Digital'"
+			[gamePrice]="'399,90'"
+			[gameType]="'AVENTURA/TIRO'"
+		/>
+		<app-card
+			gameCover="assets/bt-2.jpg"
 			[gameLabel]="'Digital'"
 			[gamePrice]="'399,90'"
 			[gameType]="'AVENTURA/TIRO'"
 		/>
 
 		<app-card
+			gameCover="assets/gow.jpg"
+			[gameLabel]="'Digital'"
+			[gamePrice]="'499,90'"
+			[gameType]="'AVENTURA'"
+		/>
+
+		<app-card
 			gameCover="assets/bt-5.jpg"
+			[gameLabel]="'Pré-venda'"
+			[gamePrice]="'399,90'"
+			[gameType]="'AVENTURA/  TIRO'"
+		/>
+
+		<app-card
+			gameCover="assets/horizon.jpg"
 			[gameLabel]="'Pré-venda'"
 			[gamePrice]="'399,90'"
 			[gameType]="'AVENTURA/  TIRO'"
