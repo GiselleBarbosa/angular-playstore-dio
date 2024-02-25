@@ -1,0 +1,9 @@
+<ng-container *ngIf="isOpenMenu">
+	<div class="menu-bar__container" *ngFor="let option of menuOptions">
+		<ul>
+			<li>
+				<a href="{{ option.link }}" target="_blank">{{ option.option }}</a>
+			</li>
+		</ul>
+	</div></ng-container
+>

@@ -1,45 +1,41 @@
-import { Component } from '@angular/core';
 import { MenuOptions } from 'src/app/interfaces/menuOptions';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { CheckScreenSizeService } from 'src/app/services/check-screen-size-service.service';
+import { Subscription } from 'rxjs';
+import { linksMock } from './links-mock';
 
 @Component({
 	selector: 'app-menu-bar',
-	template: `
-		<div class="menu-bar__container">
-			<div class="menu-bar__logo">
-				<img
-					src="assets/ps-logo.png"
-					alt="playstation store logo"
-					width="140px"
-					height="31px"
-				/>
-			</div>
-
-			<div class="menu-bar__item" *ngFor="let option of menuOptions">
-				<ul>
-					<li>
-						<a href="{{ option.link }}">{{ option.option }}</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	`,
 	styleUrls: ['./menu-bar.component.scss'],
+	templateUrl: './menu-bar.component.html',
 })
-export class MenuBarComponent {
-	public menuOptions: MenuOptions[] = [
-		{
-			option: 'PORTFÓLIO',
-			link: 'https://gisellebarbosa.github.io/portfolio/index.html',
-		},
+export class MenuBarComponent implements OnInit, OnDestroy {
+	private checkScreenSizeService = inject(CheckScreenSizeService);
+	private unsubscription!: Subscription;
 
-		{
-			option: 'LINKEDIN',
-			link: 'https://www.linkedin.com/in/gisellebarb/',
-		},
+	public isMobile = false;
+	public isOpenMenu = false;
 
-		{
-			option: 'GITHUB',
-			link: 'https://github.com/GiselleBarbosa',
-		},
-	];
+	public checkScreenSize(): void {
+		this.unsubscription = this.checkScreenSizeService
+			.getIsMobile()
+			.subscribe((isMobile: boolean) => {
+				this.isMobile = isMobile;
+				this.isOpenMenu = false;
+			});
+	}
+
+	public menuOptions: MenuOptions[] = linksMock;
+
+	public ngOnInit(): void {
+		this.checkScreenSize();
+	}
+
+	public ngOnDestroy(): void {
+		this.unsubscription.unsubscribe();
+	}
+
+	public openMenuDropdown(): void {
+		this.isOpenMenu = !this.isOpenMenu;
+	}
 }

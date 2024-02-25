@@ -1,0 +1,22 @@
+<div>
+	<div class="menu-bar__container">
+		<div class="menu-bar__logo">
+			<img src="assets/ps-logo.png" alt="playstation store logo" />
+		</div>
+
+		<div class="menu-bar__item" *ngFor="let option of menuOptions">
+			<ul *ngIf="!isMobile">
+				<li>
+					<a href="{{ option.link }}" target="_blank">{{ option.option }}</a>
+				</li>
+			</ul>
+		</div>
+
+		<div *ngIf="isMobile">
+			<div (click)="openMenuDropdown()">
+				<span class="material-symbols-outlined"> density_small </span>
+			</div>
+		</div>
+	</div>
+</div>
+<app-menu-bar-dropdown [isOpenMenu]="isOpenMenu" />

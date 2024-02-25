@@ -9,6 +9,14 @@ import { Component } from '@angular/core';
 			[gamePrice]="'299,90'"
 			[gameType]="'RPG'"
 		/>
+
+		<app-card
+			gameCover="assets/ffxii.jpg"
+			[gameLabel]="'Digital'"
+			[gamePrice]="'299,90'"
+			[gameType]="'RPG'"
+		/>
+
 		<app-card
 			gameCover="assets/gw4.png"
 			[gameLabel]="'Exclusivo'"
