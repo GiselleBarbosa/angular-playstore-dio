@@ -18,6 +18,13 @@ import { Component } from '@angular/core';
 		/>
 
 		<app-card
+			gameCover="assets/gow.jpg"
+			[gameLabel]="'Digital'"
+			[gamePrice]="'499,90'"
+			[gameType]="'AVENTURA'"
+		/>
+
+		<app-card
 			gameCover="assets/gw4.png"
 			[gameLabel]="'Exclusivo'"
 			[gamePrice]="'399,90'"
@@ -48,13 +55,6 @@ import { Component } from '@angular/core';
 			[gameLabel]="'Digital'"
 			[gamePrice]="'399,90'"
 			[gameType]="'AVENTURA/TIRO'"
-		/>
-
-		<app-card
-			gameCover="assets/gow.jpg"
-			[gameLabel]="'Digital'"
-			[gamePrice]="'499,90'"
-			[gameType]="'AVENTURA'"
 		/>
 
 		<app-card
